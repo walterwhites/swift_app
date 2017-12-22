@@ -1,8 +1,0 @@
-platform :ios, '9.0'
-use_frameworks!
-
-target 'virtualcalc' do
-platform :ios, '9.0'
-project '../virtualcalc.xcodeproj'
-  pod "UPCarouselFlowLayout"
-end
