@@ -22,8 +22,13 @@ class ViewController: UIViewController {
     fileprivate var currentPage: Int = 0 {
         didSet {
             let character = self.items[self.currentPage]
-            self.infoLabel.text = character.name.uppercased()
-            self.detailLabel.text = character.movie.uppercased()
+
+            if self.infoLabel?.text != nil {
+                self.infoLabel?.text = character.name.uppercased()
+            }
+            if self.detailLabel?.text != nil {
+                self.detailLabel.text = character.movie.uppercased()
+            }
         }
     }
     
@@ -46,7 +51,6 @@ class ViewController: UIViewController {
         
         self.setupLayout()
         self.items = self.createItems()
-        
         self.currentPage = 0
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.rotationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
