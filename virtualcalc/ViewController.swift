@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     fileprivate var currentPage: Int = 0 {
         didSet {
-            let character = self.items[self.currentPage]
+            let character? = self.items[self.currentPage]
             self.infoLabel.text = character.name.uppercased()
             self.detailLabel.text = character.movie.uppercased()
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0938231A1FEC7D5E0012E28B /* UPCarouselFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0938231B1FEC7D5E0012E28B /* UPCarouselFlowLayout.framework */; };
 		4AE9CCA41FEA641A001CB5E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA31FEA641A001CB5E3 /* AppDelegate.swift */; };
 		4AE9CCA61FEA641A001CB5E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA51FEA641A001CB5E3 /* ViewController.swift */; };
 		4AE9CCA91FEA641A001CB5E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA71FEA641A001CB5E3 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0938231B1FEC7D5E0012E28B /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UPCarouselFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EAC9787355B99F16826A92 /* Pods-virtualcalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-virtualcalc.release.xcconfig"; path = "virtualcalc/Pods/Target Support Files/Pods-virtualcalc/Pods-virtualcalc.release.xcconfig"; sourceTree = "<group>"; };
 		4AE9CCA01FEA641A001CB5E3 /* virtualcalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = virtualcalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE9CCA31FEA641A001CB5E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0938231A1FEC7D5E0012E28B /* UPCarouselFlowLayout.framework in Frameworks */,
 				BCF043DDC569237BB9C26EEE /* Pods_virtualcalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +95,7 @@
 		79E90B2E92AE08EC35A40524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0938231B1FEC7D5E0012E28B /* UPCarouselFlowLayout.framework */,
 				DA6A8C03333BCA75D21BABF2 /* Pods_virtualcalc.framework */,
 			);
 			name = Frameworks;
