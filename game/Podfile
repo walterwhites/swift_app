@@ -2,7 +2,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'game' do
-platform :ios, '9.0'
-project '../game.xcodeproj'
-  pod "UPCarouselFlowLayout"
+	platform :ios, '9.0'
+	project '../game.xcodeproj'
+	pod "UPCarouselFlowLayout"
 end
