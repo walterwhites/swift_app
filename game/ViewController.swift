@@ -1,14 +1,6 @@
-//
-//  ViewController.swift
-//  virtualcalc
-//
-//  Created by Florent on 20/12/2017.
-//  Copyright © 2017 Florent. All rights reserved.
-//
-
 import UIKit
-import UPCarouselFlowLayout
 import CoreGraphics
+import UPCarouselFlowLayout
 
 class ViewController: UIViewController {
 
@@ -130,4 +122,5 @@ class ViewController: UIViewController {
 
 
 }
+
 

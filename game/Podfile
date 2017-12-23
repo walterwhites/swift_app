@@ -4,5 +4,5 @@ use_frameworks!
 target 'game' do
 	platform :ios, '9.0'
 	project '../game.xcodeproj'
-	pod "UPCarouselFlowLayout"
+    pod "UPCarouselFlowLayout"
 end

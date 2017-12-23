@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09C86D9F1FEDB51A00ED4D36 /* UPCarouselFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C86DA01FEDB51A00ED4D36 /* UPCarouselFlowLayout.framework */; };
+		09FE51751FEEB65800CB7330 /* UPCarouselFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09775FA21FEEA3DE00D1803A /* UPCarouselFlowLayout.framework */; };
+		09FE51771FEEBE1E00CB7330 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE51761FEEBE1E00CB7330 /* UPCarouselFlowLayout.swift */; };
 		4AE9CCA41FEA641A001CB5E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA31FEA641A001CB5E3 /* AppDelegate.swift */; };
 		4AE9CCA61FEA641A001CB5E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA51FEA641A001CB5E3 /* ViewController.swift */; };
 		4AE9CCA91FEA641A001CB5E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA71FEA641A001CB5E3 /* Main.storyboard */; };
@@ -16,11 +17,24 @@
 		5C6AE36D1FEC0E0A0017B849 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6AE36C1FEC0E0A0017B849 /* CarouselCollectionViewCell.swift */; };
 		5C6AE36F1FEC0E520017B849 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6AE36E1FEC0E520017B849 /* Character.swift */; };
 		5C6AE3711FEC0E870017B849 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6AE3701FEC0E870017B849 /* GradientView.swift */; };
-		93D6770AAE762DEBF777AFA4 /* Pods_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45A65ADB5085751A5E09194 /* Pods_game.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		09775FA11FEE9F8000D1803A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		09C86DA01FEDB51A00ED4D36 /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UPCarouselFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09775FA21FEEA3DE00D1803A /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UPCarouselFlowLayout.framework; path = "../../Library/Developer/Xcode/DerivedData/game-bbrvixiusxpkjtgxqbqmtvwmfwge/Build/Products/Debug-iphonesimulator/UPCarouselFlowLayout/UPCarouselFlowLayout.framework"; sourceTree = "<group>"; };
+		09FE51761FEEBE1E00CB7330 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UPCarouselFlowLayout.swift; path = game/Pods/UPCarouselFlowLayout/UPCarouselFlowLayout/UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		4AE9CCA01FEA641A001CB5E3 /* game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE9CCA31FEA641A001CB5E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE9CCA51FEA641A001CB5E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,8 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09C86D9F1FEDB51A00ED4D36 /* UPCarouselFlowLayout.framework in Frameworks */,
-				93D6770AAE762DEBF777AFA4 /* Pods_game.framework in Frameworks */,
+				09FE51751FEEB65800CB7330 /* UPCarouselFlowLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 		4AE9CC971FEA641A001CB5E3 = {
 			isa = PBXGroup;
 			children = (
+				09FE51761FEEBE1E00CB7330 /* UPCarouselFlowLayout.swift */,
 				4AE9CCA21FEA641A001CB5E3 /* game */,
 				4AE9CCA11FEA641A001CB5E3 /* Products */,
 				3F326DF6F4958773444252DE /* Pods */,
@@ -95,7 +109,7 @@
 		79E90B2E92AE08EC35A40524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09C86DA01FEDB51A00ED4D36 /* UPCarouselFlowLayout.framework */,
+				09775FA21FEEA3DE00D1803A /* UPCarouselFlowLayout.framework */,
 				F45A65ADB5085751A5E09194 /* Pods_game.framework */,
 			);
 			name = Frameworks;
@@ -114,6 +128,7 @@
 				4AE9CC9E1FEA641A001CB5E3 /* Resources */,
 				2528FD5A5A54C95DE42A9463 /* [CP] Embed Pods Frameworks */,
 				69C58402D45F35A87FA83E98 /* [CP] Copy Pods Resources */,
+				09775FA11FEE9F8000D1803A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FE51771FEEBE1E00CB7330 /* UPCarouselFlowLayout.swift in Sources */,
 				4AE9CCA61FEA641A001CB5E3 /* ViewController.swift in Sources */,
 				5C6AE36D1FEC0E0A0017B849 /* CarouselCollectionViewCell.swift in Sources */,
 				5C6AE3711FEC0E870017B849 /* GradientView.swift in Sources */,

@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  virtualcalc
-//
-//  Created by Florent on 20/12/2017.
-//  Copyright © 2017 Florent. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

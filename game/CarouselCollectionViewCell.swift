@@ -1,11 +1,3 @@
-//
-//  CarouselCollectionViewCell.swift
-//  virtualcalc
-//
-//  Created by flo on 21/12/2017.
-//  Copyright © 2017 Florent. All rights reserved.
-//
-
 import UIKit
 
 class CarouselCollectionViewCell: UICollectionViewCell {
