@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ps-hQ-bKS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ps-hQ-bKS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,15 +13,20 @@
         <!--View Controller-->
         <scene sceneID="829-vP-Saj">
             <objects>
-                <viewController id="Bde-IB-aRQ" customClass="ViewController" customModule="virtualcalc" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="I0r-d0-fxF" customClass="GradientView" customModule="virtualcalc" customModuleProvider="target">
+                <viewController id="Bde-IB-aRQ" customClass="ViewController" customModule="game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I0r-d0-fxF" customClass="GradientView" customModule="game" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4XK-Gj-c4E">
-                                <rect key="frame" x="67" y="107" width="240" height="484"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoo-Mg-iFS">
+                                <rect key="frame" x="141" y="355" width="93" height="91"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4XK-Gj-c4E">
+                                <rect key="frame" x="82" y="88" width="210" height="199"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KXj-Bt-32P" customClass="UPCarouselFlowLayout" customModule="UPCarouselFlowLayout">
                                     <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -30,28 +35,49 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BsR-Ji-m75" customClass="CarouselCollectionViewCell" customModule="virtualcalc">
-                                        <rect key="frame" x="20" y="0.0" width="200" height="200"/>
+                                        <rect key="frame" x="5" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.94527202072538863" green="0.94527202072538863" blue="0.94527202072538863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eal-Su-u5M">
+                                <rect key="frame" x="141" y="526" width="93" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xoo-Mg-iFS" firstAttribute="top" secondItem="NEh-qY-utx" secondAttribute="top" constant="291" id="0Cj-ZY-jrJ"/>
+                            <constraint firstItem="4XK-Gj-c4E" firstAttribute="top" secondItem="NEh-qY-utx" secondAttribute="top" constant="24" id="TYc-PA-9eH"/>
+                            <constraint firstItem="NEh-qY-utx" firstAttribute="trailing" secondItem="xoo-Mg-iFS" secondAttribute="trailing" constant="141" id="d3n-xG-sh0"/>
+                            <constraint firstItem="4XK-Gj-c4E" firstAttribute="leading" secondItem="NEh-qY-utx" secondAttribute="leading" constant="82" id="eh6-iI-eM2"/>
+                            <constraint firstItem="NEh-qY-utx" firstAttribute="trailing" secondItem="4XK-Gj-c4E" secondAttribute="trailing" constant="83" id="jRC-QY-Z0N"/>
+                            <constraint firstItem="NEh-qY-utx" firstAttribute="bottom" secondItem="xoo-Mg-iFS" secondAttribute="bottom" constant="221" id="kdZ-LH-mmW"/>
+                            <constraint firstItem="NEh-qY-utx" firstAttribute="bottom" secondItem="4XK-Gj-c4E" secondAttribute="bottom" constant="380" id="mMY-zN-vdK"/>
+                            <constraint firstItem="xoo-Mg-iFS" firstAttribute="leading" secondItem="NEh-qY-utx" secondAttribute="leading" constant="141" id="nlY-Xa-pnS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NEh-qY-utx"/>
                     </view>
                     <navigationItem key="navigationItem" id="Dha-om-8aK"/>
                     <connections>
-                        <outlet property="collectionView" destination="4XK-Gj-c4E" id="sIc-te-Jcc"/>
+                        <outlet property="collectionView" destination="4XK-Gj-c4E" id="M1m-C6-usL"/>
+                        <outlet property="detailLabel" destination="eal-Su-u5M" id="CB7-p4-sgp"/>
+                        <outlet property="infoLabel" destination="xoo-Mg-iFS" id="OmG-0p-9W3"/>
                         <segue destination="nZz-1X-dBh" kind="show" id="M9B-Db-JfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1A-lK-cvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="851"/>
+            <point key="canvasLocation" x="944.79999999999995" y="850.52473763118451"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z5O-R5-2Sg">
@@ -60,7 +86,7 @@
                     <view key="view" contentMode="scaleToFill" id="0lB-IL-HkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="zDY-9q-Jr1"/>
                     </view>

@@ -13,8 +13,8 @@ import CoreGraphics
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     fileprivate var items = [Character]()
@@ -23,11 +23,12 @@ class ViewController: UIViewController {
         didSet {
             let character = self.items[self.currentPage]
 
+            print("test")
             if self.infoLabel?.text != nil {
-                self.infoLabel?.text = character.name.uppercased()
+                print(self.infoLabel.text = character.name.uppercased())
             }
             if self.detailLabel?.text != nil {
-                self.detailLabel.text = character.movie.uppercased()
+                print(self.detailLabel.text = character.movie.uppercased())
             }
         }
     }

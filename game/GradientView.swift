@@ -11,7 +11,7 @@
 import UIKit
 
 class GradientView: UIView {
-    
+/*
     override func draw(_ rect: CGRect) {
         let colorSpace: CGColorSpace = CGColorSpaceCreateDeviceRGB()
         let context: CGContext = UIGraphicsGetCurrentContext()!
@@ -29,5 +29,5 @@ class GradientView: UIView {
         context.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: [])
         context.restoreGState()
     }
-    
+    */
 }
