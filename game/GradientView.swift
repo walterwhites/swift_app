@@ -1,8 +1,7 @@
-
 import UIKit
 
 class GradientView: UIView {
-
+    
     override func draw(_ rect: CGRect) {
         let colorSpace: CGColorSpace = CGColorSpaceCreateDeviceRGB()
         let context: CGContext = UIGraphicsGetCurrentContext()!

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ps-hQ-bKS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3ps-hQ-bKS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -66,7 +65,7 @@
                                             <constraint firstItem="2I7-1D-ZWH" firstAttribute="leading" secondItem="llp-X3-Mte" secondAttribute="leading" id="z5b-8I-ce0"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="image" destination="2I7-1D-ZWH" id="o9L-GH-CUb"/>
+                                            <outlet property="image" destination="2I7-1D-ZWH" id="ceO-lQ-o5v"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -134,7 +133,6 @@
                             <constraint firstAttribute="trailing" secondItem="din-gq-Vb3" secondAttribute="trailing" id="x3h-8N-Fx2"/>
                             <constraint firstItem="din-gq-Vb3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z7b-lu-A5J"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="1KF-vQ-5NH"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Vbz-sP-ICd"/>
@@ -179,30 +177,33 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="CSe-4J-2Li" id="OrO-Qc-Vma"/>
-                        <outlet property="detailLabel" destination="0RQ-Wg-X6w" id="dCl-2y-lzR"/>
+                        <outlet property="collectionView" destination="CSe-4J-2Li" id="ItX-8z-rAU"/>
+                        <outlet property="detailLabel" destination="0RQ-Wg-X6w" id="6eP-cn-Nk3"/>
                         <outlet property="infoLabel" destination="ACZ-N4-qgi" id="SH0-wd-E1u"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u1A-lK-cvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.79999999999995" y="850.52473763118451"/>
+            <point key="canvasLocation" x="480" y="463"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z5O-R5-2Sg">
             <objects>
                 <viewController id="nZz-1X-dBh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcj-tX-8Nd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ScL-Nx-LXA"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0lB-IL-HkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <viewLayoutGuide key="safeArea" id="zDY-9q-Jr1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8w-OM-xKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="852"/>
+            <point key="canvasLocation" x="1386" y="463"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Flc-kg-vBf">
@@ -218,7 +219,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1s-xT-aAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="854"/>
+            <point key="canvasLocation" x="-380" y="584"/>
         </scene>
     </scenes>
 </document>

@@ -2,12 +2,14 @@ import UIKit
 import CoreGraphics
 import UPCarouselFlowLayout
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    
     
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     fileprivate var items = [Character]()
     
@@ -15,7 +17,6 @@ class ViewController: UIViewController {
         didSet {
             let character = self.items[self.currentPage]
 
-            print("test")
             if self.infoLabel?.text != nil {
                 print(self.infoLabel.text = character.name.uppercased())
             }
@@ -96,6 +97,7 @@ class ViewController: UIViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarouselCollectionViewCell.identifier, for: indexPath) as! CarouselCollectionViewCell
         let character = items[(indexPath as NSIndexPath).row]
         cell.image.image = UIImage(named: character.imageName)
+        print("conard")
         return cell
     }
     
@@ -122,5 +124,6 @@ class ViewController: UIViewController {
 
 
 }
+
 
 
