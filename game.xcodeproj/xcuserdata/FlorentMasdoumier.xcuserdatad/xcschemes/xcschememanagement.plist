@@ -4,15 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>game.xcscheme</key>
+		<key>UPCarouselFlowLayout.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+		<key>game.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 		<key>virtualcalc.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4AE9CC9F1FEA641A001CB5E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

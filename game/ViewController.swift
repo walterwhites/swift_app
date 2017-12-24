@@ -1,6 +1,6 @@
 import UIKit
 import CoreGraphics
-import UPCarouselFlowLayout
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -9,6 +9,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    var audioPlayer:AVAudioPlayer!
     
     
     fileprivate var items = [Character]()
@@ -18,10 +19,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let character = self.items[self.currentPage]
 
             if self.infoLabel?.text != nil {
-                print(self.infoLabel.text = character.name.uppercased())
+                self.infoLabel.text = character.name.uppercased()
+                print("test " + "\(self.infoLabel.text!)")
             }
             if self.detailLabel?.text != nil {
-                print(self.detailLabel.text = character.movie.uppercased())
+                self.detailLabel.text = character.onomatope.uppercased()
+                print("test " + "\(self.detailLabel.text!)")
             }
         }
     }
@@ -36,8 +39,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         return pageSize
     }
-    func CGSizeMake(_ width: CGFloat, _ height: CGFloat) -> CGSize {
-        return CGSize(width: width, height: height)
+    
+    fileprivate var orientation: UIDeviceOrientation {
+        return UIDevice.current.orientation
     }
     
     override func viewDidLoad() {
@@ -50,6 +54,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.rotationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
+    @IBAction func playSound(sender: UIButton) {
+        var audioFilePath = NSBundle.mainBundle().pathForResource("lion", ofType: "mp3")
+        if audioFilePath != nil {
+            var audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+            audioPlayer = AVAudioPlayer(contentsOfURL: audioFileUrl, error: nil)
+            audioPlayer.play()
+        } else {
+            println("audio file is not found")
+        }
+    }
+    
     fileprivate func setupLayout() {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
@@ -57,18 +72,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     fileprivate func createItems() -> [Character] {
         let characters = [
-            Character(imageName: "wall-e", name: "Wall-E", movie: "Wall-E"),
-            Character(imageName: "nemo", name: "Nemo", movie: "Finding Nemo"),
-            Character(imageName: "ratatouille", name: "Remy", movie: "Ratatouille"),
-            Character(imageName: "buzz", name: "Buzz Lightyear", movie: "Toy Story"),
-            Character(imageName: "monsters", name: "Mike & Sullivan", movie: "Monsters Inc."),
-            Character(imageName: "brave", name: "Merida", movie: "Brave")
+            Character(imageName: "lion", name: "lion", onomatope: "Rrrrrrhhrhhrhhrh"),
+            Character(imageName: "poisson", name: "poisson", onomatope: "Glouglou"),
+            Character(imageName: "chat", name: "chat", onomatope: "miaou"),
+            Character(imageName: "chien", name: "chien", onomatope: "ouaffff")
         ]
         return characters
-    }
-    
-    fileprivate var orientation: UIDeviceOrientation {
-        return UIDevice.current.orientation
     }
     
     @objc fileprivate func rotationDidChange() {
@@ -97,7 +106,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarouselCollectionViewCell.identifier, for: indexPath) as! CarouselCollectionViewCell
         let character = items[(indexPath as NSIndexPath).row]
         cell.image.image = UIImage(named: character.imageName)
-        print("conard")
         return cell
     }
     
@@ -117,12 +125,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
 
