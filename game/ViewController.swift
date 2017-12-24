@@ -54,15 +54,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.rotationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
-    @IBAction func playSound(sender: UIButton) {
-        var audioFilePath = NSBundle.mainBundle().pathForResource("lion", ofType: "mp3")
+    func trackOrientationChanges(animal: String) {
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIDeviceOrientationDidChange, object: nil, queue: nil, using:
+            { notificiation in
+                if UIDevice.current.orientation == .faceDown {
+                    self.audioPlayer = self.playBackgroundMusic(animal: animal)
+                } else {
+                    print("Device is not face down")
+                }
+        })
+    }
+    
+    func playBackgroundMusic(animal: String) -> AVAudioPlayer {
+        let audioFilePath = Bundle.main.path(forResource: animal, ofType: "mp3")
         if audioFilePath != nil {
-            var audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
-            audioPlayer = AVAudioPlayer(contentsOfURL: audioFileUrl, error: nil)
-            audioPlayer.play()
-        } else {
-            println("audio file is not found")
+            let audioFileUrl = NSURL.fileURL(withPath: audioFilePath!)
+            var error: NSError?
+            
+            do {
+                self.audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
+            } catch let error1 as NSError {
+                error = error1
+                self.audioPlayer = nil
+                print(error?.localizedDescription)
+            }
+            
+            if error == nil {
+                self.audioPlayer.play()
+            }
         }
+        return self.audioPlayer
     }
     
     fileprivate func setupLayout() {
@@ -111,9 +133,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let character = items[(indexPath as NSIndexPath).row]
-        let alert = UIAlertController(title: character.name, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let titre = character.onomatope
+        let message = "Retournez le téléphone pour faire le son (sans quitter cette fenêtre)"
+        let animal = character.name
+        let alert = UIAlertController(title: animal! + ": " + titre!, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Quitter", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+        print("animal is \(character)")
+        trackOrientationChanges(animal: character.imageName)
     }
     
     

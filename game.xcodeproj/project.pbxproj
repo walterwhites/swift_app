@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		0950A78E1FF042C000E7255C /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950A78D1FF042C000E7255C /* UPCarouselFlowLayout.swift */; };
 		0950A78F1FF042C000E7255C /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950A78D1FF042C000E7255C /* UPCarouselFlowLayout.swift */; };
-		0950A7961FF050B400E7255C /* lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0950A7921FF050B300E7255C /* lion.mp3 */; };
-		0950A7971FF050B400E7255C /* chien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0950A7931FF050B300E7255C /* chien.mp3 */; };
-		0950A7981FF050B400E7255C /* chat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0950A7941FF050B300E7255C /* chat.mp3 */; };
-		0950A7991FF050B400E7255C /* poisson.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0950A7951FF050B400E7255C /* poisson.mp3 */; };
+		09F2AFBF1FF054AC00D211AB /* chat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09F2AFBB1FF054AB00D211AB /* chat.mp3 */; };
+		09F2AFC01FF054AC00D211AB /* chien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09F2AFBC1FF054AC00D211AB /* chien.mp3 */; };
+		09F2AFC11FF054AC00D211AB /* lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09F2AFBD1FF054AC00D211AB /* lion.mp3 */; };
+		09F2AFC21FF054AC00D211AB /* poisson.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09F2AFBE1FF054AC00D211AB /* poisson.mp3 */; };
 		4AE9CCA41FEA641A001CB5E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA31FEA641A001CB5E3 /* AppDelegate.swift */; };
 		4AE9CCA61FEA641A001CB5E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA51FEA641A001CB5E3 /* ViewController.swift */; };
 		4AE9CCA91FEA641A001CB5E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE9CCA71FEA641A001CB5E3 /* Main.storyboard */; };
@@ -36,11 +36,11 @@
 /* Begin PBXFileReference section */
 		0950A75C1FF03E0F00E7255C /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UPCarouselFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0950A78D1FF042C000E7255C /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
-		0950A7921FF050B300E7255C /* lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lion.mp3; sourceTree = "<group>"; };
-		0950A7931FF050B300E7255C /* chien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chien.mp3; sourceTree = "<group>"; };
-		0950A7941FF050B300E7255C /* chat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chat.mp3; sourceTree = "<group>"; };
-		0950A7951FF050B400E7255C /* poisson.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poisson.mp3; sourceTree = "<group>"; };
 		09775FA21FEEA3DE00D1803A /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UPCarouselFlowLayout.framework; path = "../../Library/Developer/Xcode/DerivedData/game-bbrvixiusxpkjtgxqbqmtvwmfwge/Build/Products/Debug-iphonesimulator/UPCarouselFlowLayout/UPCarouselFlowLayout.framework"; sourceTree = "<group>"; };
+		09F2AFBB1FF054AB00D211AB /* chat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chat.mp3; sourceTree = "<group>"; };
+		09F2AFBC1FF054AC00D211AB /* chien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chien.mp3; sourceTree = "<group>"; };
+		09F2AFBD1FF054AC00D211AB /* lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lion.mp3; sourceTree = "<group>"; };
+		09F2AFBE1FF054AC00D211AB /* poisson.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poisson.mp3; sourceTree = "<group>"; };
 		4AE9CCA01FEA641A001CB5E3 /* game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE9CCA31FEA641A001CB5E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE9CCA51FEA641A001CB5E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,15 +82,15 @@
 			path = UPCarouselFlowLayout;
 			sourceTree = "<group>";
 		};
-		0950A79A1FF050D300E7255C /* Supporting Files  */ = {
+		09F2AFBA1FF0547500D211AB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				0950A7941FF050B300E7255C /* chat.mp3 */,
-				0950A7931FF050B300E7255C /* chien.mp3 */,
-				0950A7921FF050B300E7255C /* lion.mp3 */,
-				0950A7951FF050B400E7255C /* poisson.mp3 */,
+				09F2AFBB1FF054AB00D211AB /* chat.mp3 */,
+				09F2AFBC1FF054AC00D211AB /* chien.mp3 */,
+				09F2AFBD1FF054AC00D211AB /* lion.mp3 */,
+				09F2AFBE1FF054AC00D211AB /* poisson.mp3 */,
 			);
-			path = "Supporting Files ";
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		3F326DF6F4958773444252DE /* Pods */ = {
@@ -124,7 +124,7 @@
 		4AE9CCA21FEA641A001CB5E3 /* game */ = {
 			isa = PBXGroup;
 			children = (
-				0950A79A1FF050D300E7255C /* Supporting Files  */,
+				09F2AFBA1FF0547500D211AB /* Sounds */,
 				0950A78C1FF0429C00E7255C /* UPCarouselFlowLayout */,
 				4AE9CCA31FEA641A001CB5E3 /* AppDelegate.swift */,
 				4AE9CCA51FEA641A001CB5E3 /* ViewController.swift */,
@@ -252,12 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0950A7971FF050B400E7255C /* chien.mp3 in Resources */,
-				0950A7961FF050B400E7255C /* lion.mp3 in Resources */,
-				0950A7981FF050B400E7255C /* chat.mp3 in Resources */,
-				0950A7991FF050B400E7255C /* poisson.mp3 in Resources */,
+				09F2AFC01FF054AC00D211AB /* chien.mp3 in Resources */,
+				09F2AFC21FF054AC00D211AB /* poisson.mp3 in Resources */,
 				4AE9CCAB1FEA641A001CB5E3 /* Assets.xcassets in Resources */,
+				09F2AFC11FF054AC00D211AB /* lion.mp3 in Resources */,
 				4AE9CCA91FEA641A001CB5E3 /* Main.storyboard in Resources */,
+				09F2AFBF1FF054AC00D211AB /* chat.mp3 in Resources */,
 				4AE9CCAE1FEA641A001CB5E3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
